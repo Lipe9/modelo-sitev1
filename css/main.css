@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 @media (min-width: 300px) {
   .produtos-container {
     grid-template-columns: repeat(1, 1fr);

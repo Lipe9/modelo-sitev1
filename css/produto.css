@@ -7,13 +7,14 @@
     text-align: center;
     background-color:rgba(212, 204, 204, 0.864);
   }
-  .li1 a, .li2 a {
+  .li1 a, .li2 a, .li3 a{
     color: #fff;
     transition: color 0.3s ease-in-out;
     letter-spacing: 1px;
   }
   nav.menu-texto-escuro .li1 a,
-  nav.menu-texto-escuro .li2 a {
+  nav.menu-texto-escuro .li2 a,
+  nav.menu-texto-escuro .li3 a{
     color: #000;
   }
   .produtos-container{
@@ -37,7 +38,6 @@
     display: block;
     cursor: pointer;
     text-align: center;
-    animation: animar infinite ease;
   }
   .card-produto img{
     width: 100%;
@@ -64,9 +64,9 @@
 .btn-carrinho {
   position: absolute;
   bottom: 95px;
-  left: 50%;
+  left: 20%;
   transform: translateX(-50%) translateY(20px);
-  padding: 2px 65px;
+  padding: 15px 20px;
   background: green;
   color: #fff;
   border: none;
@@ -77,10 +77,52 @@
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.card-produto:hover .btn-carrinho {
+.card-produto:hover .btn-carrinho{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.card-produto:hover .btn-favorito{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.card-produto:hover .btn-link{
   opacity: 1;
   transform: translateX(-50%) translateY(0);
   pointer-events: auto;
 }
 
+.btn-favorito{
+  position: absolute;
+  bottom: 95px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  padding: 15px 20px;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
+.btn-link{
+  position: absolute;
+  bottom: 95px;
+  left: 80%;
+  transform: translateX(-50%) translateY(20px);
+  padding: 15px 20px;
+  background: orange;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
