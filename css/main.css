@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@media (min-width: 300px) {
+  .produtos-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 600px) {
+  .produtos-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .produtos-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1210px) {
+  .produtos-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

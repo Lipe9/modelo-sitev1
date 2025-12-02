@@ -1,0 +1,108 @@
+#menu-mobile{
+    display: none;
+}
+.menu-btn{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-btn span{
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.slide-menu{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: green;
+    color: white;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    z-index: 1001;
+}
+.slide-menu .li{
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.li:hover{
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4) ;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+#menu-mobile:checked ~ .slide-menu{
+    left: 0;
+}
+#menu-mobile:checked ~.overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+#menu-mobile:checked + .menu-btn span:nth-child(1){
+    transform: rotate(45deg) translateY(13px);
+    background: white;
+}
+#menu-mobile:checked + .menu-btn span:nth-child(2){
+    opacity: 0;
+}
+#menu-mobile:checked + .menu-btn span:nth-child(3){
+    transform: rotate(-45deg) translateY(-13px);
+    background: white;
+}
+.hamburger{
+    display: none;
+}
+.logo2{
+    display: none;
+}
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  .hamburger{
+    display: flex;
+  }
+  .logo2{
+    display: flex;
+  }
+  .logo2{
+    width: 250px;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+.img2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 1000;
+}
+}
