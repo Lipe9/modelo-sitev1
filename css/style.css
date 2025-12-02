@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url(/img/fundo.jpg);
+  background-image: url(img/fundo.jpg);
   background-size: cover;
 }
 header{
@@ -78,4 +78,5 @@ ul,a{
 .li2 a.active::after{
   transform: scaleX(1);
   transform-origin: bottom right;
+
 }
